@@ -1,0 +1,37 @@
+:root {
+    --background-color: #e0f1f8;
+    --text-color: #2d3e3f;
+    --gray-text-color: #5a6e6f;
+    --gray-text-color-light: #aaa7a7;
+    --primary-color: #009193;
+
+    --primary-color-hover: #00777a;
+    --secondary-color: #b0dfe0;
+    --success-color: #006d4e;
+    --danger-color: #bf4a50;
+    --warning-color: #e0a800;
+    --info-color: #007b82;
+    --light-color: #f0f8f9;
+    --dark-color: #1c2b2c;
+    --form-bg-color: #ffffff;
+    --form-border-color: #009193;
+    --input-border-color: #d1d5db;
+    --input-color: #a8bec0;
+    --font-family: 'Poppins', sans-serif;
+    --border-radius: 0.25rem;
+    --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+
+    /* ====== Transition ====== */
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+    --transition: all 0.3s ease-in-out;
+
+    /* ====== Dimensions ======= */
+    --max-width: 1200px;
+    --header-height: 8rem;
+    --footer-height: 4rem;
+    --footer-margin-top: 1rem;
+    --footer-padding: 1rem;
+    --sidebar-width: 250px;
+}

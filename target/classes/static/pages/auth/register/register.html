@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="/pages/auth/register/register.css"> <!-- CSS -->
+  <script defer src="/js/include.js"></script>
+  <script defer type="module" src="/pages/auth/register/register.js"></script> <!-- JS  -->
+
+
+
+</head>
+<body>
+
+<!--header include -->
+<header></header>
+
+
+<main class="page-container">
+
+  <div class="form-container">
+    <div class="title-container">
+      <img class="logo" src="/images/logo.png" alt="Your Company">
+      <h2 class="title"> Create your account</h2>
+
+      <!-- Alert message -->
+      <div role="alert" id="alert-message" class="alert error">
+        <div class="alert-header">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="alert-icon">
+            <path
+                    fill-rule="evenodd"
+                    d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003zM12 8.25a.75.75 0 01.75.75v3.75a.75.75 0 01-1.5 0V9a.75.75 0 01.75-.75zm0 8.25a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                    clip-rule="evenodd"
+            />
+          </svg>
+          <strong class="alert-title">Something went wrong</strong>
+        </div>
+
+      </div>
+
+      <div class="alert success" id="success-alert" role="alert" tabindex="-1" aria-labelledby="success-alert-label">
+        <div class="alert-content">
+          <div class="alert-icon-container">
+            <!-- Icon -->
+            <span class="alert-icon-background">
+        <svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+          <path d="m9 12 2 2 4-4"></path>
+        </svg>
+      </span>
+            <!-- End Icon -->
+          </div>
+          <div class="alert-text">
+            <h3 id="success-alert-label" class="alert-title">
+              Successfully
+            </h3>
+            <p class="alert-message">
+              You have successfully updated your email preferences.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--        Alert message-->
+    </div>
+    <form class="register-form"  id="registerForm" >
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="firstName" class="form-label">First name</label>
+          <input id="firstName" name="firstName" type="text"
+                 maxlength="255"
+                 pattern="^[A-Za-z]{3,}$"
+                 title="First Name must be at least 3 characters long and contain only letters."
+                 required class="form-input">
+        </div>
+        <div class="form-group">
+          <label for="infix" class="form-label">Infix</label>
+          <input id="infix" name="infix" type="text" maxlength="255" class="form-input">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="lastName" class="form-label">Last name </label>
+        <input id="lastName" name="lastName" type="text"
+               maxlength="255"
+               required
+               pattern="^[A-Za-z]{3,}$"
+               title="Last Name must be at least 3 characters long and contain only letters."
+               class="form-input">
+      </div>
+      <div class="form-group">
+        <label for="email" class="form-label">Email </label>
+        <input id="email" name="email" type="email" minlength="4" maxlength="255" autocomplete="email" required class="form-input">
+      </div>
+
+      <div class="form-group">
+        <label for="userName" class="form-label">Username</label>
+        <input id="userName"
+               name="userName"
+               type="text"
+               required
+               maxlength="100"
+               pattern="^(?=.*[A-Za-z])[A-Za-z0-9]{4,}$"
+               title="Username must be at least 4 characters long, contain at least one letter, and consist only of letters and numbers."
+               class="form-input">
+      </div>
+
+      <div class="form-group">
+        <label for="password" class="form-label">Password</label>
+        <input maxlength="255" minlength="8"  id="password" name="password" type="password" autocomplete="current-password"
+               required
+               class="form-input"
+        >
+      </div>
+      <div class="form-group">
+        <label  class="form-label">Select role</label>
+        <div class="role-selection">
+          <input checked type="radio" id="host" name="role" value="ROLE_HOST">
+          <label for="host">Host</label>
+
+          <input type="radio" id="guest" name="role" value="ROLE_GUEST">
+          <label for="guest">Guest</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <button id="submit-button"  type="submit" class="btn btn-primary submit-button">Create account</button>
+      </div>
+    </form>
+
+  </div>
+</main>
+<!-- Footer include -->
+<footer></footer>
+
+</body>
+</html>
+
+
+
+

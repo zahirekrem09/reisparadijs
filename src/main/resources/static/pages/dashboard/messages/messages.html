@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="/pages/dashboard/messages/messages.css">
+    <!----======== JS ======== -->
+    <script type="module" defer src="/js/sidebar.js"></script>
+    <script type="module" defer src="/pages/dashboard/messages/messages.js"></script>
+    <title>Dashboard | Messages </title>
+</head>
+
+<body>
+<!--sidebar include -->
+<aside></aside>
+
+<!--main  content -->
+<section class="dashboard-content">
+    <div class="email-main-content">
+        <header class="email-header">
+            <h1>Inbox</h1>
+            <a class="btn btn-primary new-message">+ New Message</a>
+        </header>
+
+        <!-- Email List -->
+        <div class="email-list" id="email-list">
+
+            <!-- Add more email items as needed -->
+        </div>
+    </div>
+
+    <div class="email-details-container">
+
+
+        <!-- Email Details -->
+        <div class="email-details" >
+      <pre>
+        <code class="email-details-code" id="email-details"></code>
+      </pre>
+        </div>
+        <div class="email-reply">
+            <textarea placeholder="Type message..."></textarea>
+            <button class="btn btn-primary">Send</button>
+        </div>
+
+    </div>
+</section>
+</body>
+
+</html>

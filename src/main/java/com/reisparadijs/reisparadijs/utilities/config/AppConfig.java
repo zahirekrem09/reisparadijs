@@ -1,0 +1,48 @@
+package com.reisparadijs.reisparadijs.utilities.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.thymeleaf.spring6.SpringTemplateEngine;
+import org.thymeleaf.spring6.templateresolver.SpringResourceTemplateResolver;
+import org.thymeleaf.templatemode.TemplateMode;
+
+import java.nio.charset.StandardCharsets;
+
+/**
+ * @author Zahir Ekrem SARITEKE
+ * @project reisparadijs
+ * @created 11 August Sunday 2024 - 17:48
+ */
+
+@Configuration
+public class AppConfig {
+
+    /**
+     * Spring template engine bean.
+     *
+     * @return SpringTemplateEngine
+     */
+    @Bean
+    public SpringTemplateEngine springTemplateEngine() {
+        SpringTemplateEngine templateEngine = new SpringTemplateEngine();
+        templateEngine.addTemplateResolver(htmlTemplateResolver());
+
+        return templateEngine;
+    }
+
+    /**
+     * Spring resource template resolver bean.
+     *
+     * @return SpringResourceTemplateResolver
+     */
+    @Bean
+    public SpringResourceTemplateResolver htmlTemplateResolver() {
+        SpringResourceTemplateResolver emailTemplateResolver = new SpringResourceTemplateResolver();
+        emailTemplateResolver.setPrefix("classpath:/templates/");
+        emailTemplateResolver.setSuffix(".html");
+        emailTemplateResolver.setTemplateMode(TemplateMode.HTML);
+        emailTemplateResolver.setCharacterEncoding(StandardCharsets.UTF_8.name());
+
+        return emailTemplateResolver;
+    }
+}

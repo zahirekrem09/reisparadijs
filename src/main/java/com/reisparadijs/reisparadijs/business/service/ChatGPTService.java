@@ -16,17 +16,17 @@ import java.net.http.HttpResponse;
  */
 
 public class ChatGPTService {
-    private static final String API_KEY = "sk-proj-dbpr6Pz5dMg7fPWEWrgKT3BlbkFJAXOhIygXJJSQ0FpBcJTc";
+    private static final String API_KEY = "";
     private static final String API_URL = "https://api.openai.com/v1/chat/completions";
 
-
-    public static String ChatGPTLocationRequest(String location){
+    public static String ChatGPTLocationRequest(String location) {
         StringBuilder question = new StringBuilder();
         question.append("Geef 1 plaats in Nederland die wordt geassocieerd met: ");
         question.append(location);
         question.append(" en die ik kan bezoeken als toerist. Geef alleen de naam van de gemeente in Nederland terug");
         // question.append(location);
-        // question.append(" een bestaande plaats in Nederland is, geef dan de plaats voor de opgegeven locatie terug ");
+        // question.append(" een bestaande plaats in Nederland is, geef dan de plaats
+        // voor de opgegeven locatie terug ");
         return ChatGPTQuestion(question.toString());
     }
 
@@ -50,7 +50,6 @@ public class ChatGPTService {
         }
         return answer; // Return het antwoord
     }
-
 
     private static String buildRequestBody(String question) {
         JsonObject json = new JsonObject();
